@@ -123,24 +123,13 @@ header {
 }
 .nav-menu {
     max-width: 1280px;
-    height: 70px;
-    margin-inline: auto;
-
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 .nav-list {
     display: none;
-    gap: 32px;
-    list-style: none;
   }
   
-  .nav-list a {
-    font-size: 18px;
-    color: #fff;
-    padding-block: 16px;
-  }
   .hamburger {
     display: none;
     border: none;
@@ -301,9 +290,28 @@ header {
     background-image: linear-gradient(to bottom, #212121, #121212, #121212);
     padding: 14px 5px 14px;
     border-radius: 10px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
     margin-bottom: 10px;
 }
+.scroll {
+    overflow-x: scroll;
+}
+.scroll::-webkit-scrollbar,
+.scroll::-webkit-scrollbar-thumb {
+  width: 24px;
+  background-clip: padding-box;
+  border: 6px solid transparent;
+}
+
+.scroll::-webkit-scrollbar-thumb {        
+    background-color: #b7b3b63e;
+  }
+  
+.scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #b4b2b2;
+}
+
 .main-content h2 {
     font-size: 20px;
     cursor: pointer;
@@ -317,6 +325,7 @@ header {
 .main-content p {
     color: #b7b3b6;
     font-size: 14px;
+    padding-top: 20px;
 }
 
 .title {
@@ -423,8 +432,8 @@ header {
 }
 .albums-card:hover {
     background-image: linear-gradient(to top, #1F1F1F, transparent);
-    
 }
+
 .best-card {
     position: relative;
     display: inline-block;
@@ -529,11 +538,13 @@ header {
     }
     .hamburger {
         display: block;
-        z-index: 1;
+        z-index: 1000;
       }
     
       .nav-list {
+        display: flex;
         position: fixed;
+        padding: 70px 0px 0px 40px;
         top: 0;
         left: 0;
         width: 100vw;
@@ -541,20 +552,29 @@ header {
         background: #000;
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
-    
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        gap: 0;
-    
+        align-items: flex-start;
         pointer-events: none;
+        z-index: 999
       }
-    
       .nav-list a {
-        font-size: 24px;
-        opacity: 0;
+        font-size: 13px;
+        font-weight: 800;
+        color: #fff;
+        padding-block: 16px;
+        text-decoration: none;
       }
-    
+      .hamburger-header {
+        padding-bottom: 20px;
+      }
+      .hamburger-header a {
+        display: flex;
+        font-size: 20px;
+      }
+      .nav-list hr {
+        width: 30px;
+        margin-bottom: 20px;
+      }
       .nav-list li:nth-child(1) a {
         transition: 0.5s 0.2s;
       }
