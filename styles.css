@@ -161,20 +161,20 @@ header {
     border-radius: 10px;
 }
 
-.nav-library {
+.side-library {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 14px 13px 30px;
 }
-.nav-library i, .nav-library p{
+.side-library i, .side-library p{
     color: #b7b3b6;
     font-size: 14px;
     font-weight: bold;
     cursor: pointer;
 }
 
-.nav-library button {
+.side-library button {
     background-color: transparent;
     color: #fff;
     border: none;
@@ -205,7 +205,7 @@ header {
 .playlist-podcast::-webkit-scrollbar-thumb:hover {
     background-color: #b4b2b2;
 }
-.nav-playlist {
+.side-playlist {
     background-color: #242424;
     padding: 16px;
     border-radius: 8px;
@@ -213,10 +213,10 @@ header {
     flex-direction: column;
     gap: 15px;
 }
-.nav-playlist p, .nav-podcast p {
+.side-playlist p, .side-podcast p {
     font-size: 13px;
 }
-.nav-playlist button, .nav-podcast button {
+.side-playlist button, .side-podcast button {
     cursor: pointer;
     background-color: #fff;
     font-weight: bold;
@@ -227,7 +227,7 @@ header {
     padding: 10px;
     align-self: flex-start;
 }
-.nav-podcast {
+.side-podcast {
     background-color: #242424;
     padding: 16px;
     border-radius: 8px;
@@ -235,21 +235,21 @@ header {
     flex-direction: column;
     gap: 15px;
 }
-.nav-footer {
+.side-footer {
     margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
     gap: 5px;
 }
 
-.nav-footer a {
+.side-footer a {
     text-decoration: none;
     color: #b7b3b6;
     font-size: 10px;
     padding: 8px 8px;
     
 }
-.nav-language-button {
+.side-language-button {
     background-color: transparent;
     color: #fff;
     font-weight: bold;
