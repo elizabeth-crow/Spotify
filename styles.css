@@ -1,18 +1,18 @@
-
+/*Configurações Gerais*/
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
 body {
     background-color: #000000;
     color: #fff;
     margin: 0;
-    overflow: hidden; 
+    overflow: hidden;
 }
 
+/*Header e Barra de Pesquisa*/
 header {
     display: flex;
     gap: 10PX;
@@ -25,7 +25,6 @@ header {
         font-size: 30px;
         color: #fff;
 }
-
 .header-content {
     display: flex;
     gap: 10px;
@@ -58,7 +57,6 @@ header {
 .header-search-bar i {
     color: #b7b3b6;
 }
-
 .header-search-bar input{
     background-color: #242424;
     color: #ffffff;
@@ -80,7 +78,6 @@ header {
 .header-browser i {
     border-left: 1px solid #c2c2c2;
     padding-left: 15px;
-    
 }
 .sign {
     display: flex;
@@ -95,13 +92,11 @@ header {
     border: none;
     cursor: pointer;
 }
-
 .header-sign:hover {
     font-size: 15px;
     font-weight: 800;
     color: #fff;
 }
-
 .header-log {
     background-color: #ffffff;
     font-weight: bold;
@@ -115,8 +110,6 @@ header {
     font-size: 15px;
     padding: 16px 26px;
 }
-
-
 .menu-hamburger {
     background:  #000000;
     padding-inline: 16px;
@@ -128,18 +121,16 @@ header {
 }
 .nav-list {
     display: none;
-  }
-  
-  .hamburger {
+}
+.hamburger {
     display: none;
     border: none;
     background: none;
     border-top: 3px solid #fff;
     cursor: pointer;
-  }
-  
-  .hamburger::after,
-  .hamburger::before {
+} 
+.hamburger::after,
+.hamburger::before {
     content: " ";
     display: block;
     width: 30px;
@@ -148,19 +139,16 @@ header {
     margin-top: 5px;
     position: relative;
     transition: 0.3s;
-  }
+}
 
+/*Conteúdo*/
 .container {
     display: flex;
     height: 77vh;
     width: 100vw;
 }
 
-/* .hero {
-    height: calc(100vh - 70px);
-    background: center / cover no-repeat #000000;
-  } */
-
+/*Barra Lateral*/
 .sidebar {
     width: 280px;
     flex-shrink: 0;
@@ -205,23 +193,18 @@ header {
     overflow-y: auto;
     transition: color .3s ease;
 }
-
 .playlist-podcast::-webkit-scrollbar,
 .playlist-podcast::-webkit-scrollbar-thumb {
   width: 24px;
   background-clip: padding-box;
   border: 6px solid transparent;
 }
-
 .playlist-podcast::-webkit-scrollbar-thumb {        
     background-color: #b7b3b63e;
-  }
-  
+} 
 .playlist-podcast::-webkit-scrollbar-thumb:hover {
     background-color: #b4b2b2;
 }
-
-
 .nav-playlist {
     background-color: #242424;
     padding: 16px;
@@ -230,11 +213,9 @@ header {
     flex-direction: column;
     gap: 15px;
 }
-
 .nav-playlist p, .nav-podcast p {
     font-size: 13px;
 }
-
 .nav-playlist button, .nav-podcast button {
     cursor: pointer;
     background-color: #fff;
@@ -246,7 +227,6 @@ header {
     padding: 10px;
     align-self: flex-start;
 }
-
 .nav-podcast {
     background-color: #242424;
     padding: 16px;
@@ -255,9 +235,6 @@ header {
     flex-direction: column;
     gap: 15px;
 }
-
-
-
 .nav-footer {
     margin-top: 15px;
     display: flex;
@@ -272,7 +249,6 @@ header {
     padding: 8px 8px;
     
 }
-
 .nav-language-button {
     background-color: transparent;
     color: #fff;
@@ -285,7 +261,7 @@ header {
     cursor: pointer;
 }
 
-
+/*Playlists*/
 .main-content {
     background-image: linear-gradient(to bottom, #212121, #121212, #121212);
     padding: 14px 5px 14px;
@@ -343,14 +319,11 @@ header {
 .main-artists-grid img {
     border-radius: 50%;
 }
-.main-albums-grid {
+.main-albums-grid, .main-best-grid {
     display: flex;
 }
 .main-albums-grid img, .main-best-grid img {
     border-radius: 10px;
-}
-.main-best-grid {
-    display: flex;
 }
 .main-play {
     position: relative;
@@ -369,7 +342,6 @@ header {
     top: 60%; /* Ajuste conforme necessário */
     left: 75%; /* Ajuste conforme necessário */
     transform: translate(-50%, -50%); 
-    
 }
 .albums-card .main-play {
     display: none;
@@ -381,11 +353,10 @@ header {
     font-size: 20px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.551);
     cursor: pointer;
-    position: absolute; /* Para garantir que o botão fique na posição correta */
-    top: 60%; /* Ajuste conforme necessário */
-    left: 79%; /* Ajuste conforme necessário */
-    transform: translate(-50%, -50%); 
-    
+    position: absolute; 
+    top: 60%; 
+    left: 79%; 
+    transform: translate(-50%, -50%);  
 }
 .best-card .main-play {
     display: none;
@@ -397,9 +368,9 @@ header {
     font-size: 20px;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.551);
     cursor: pointer;
-    position: absolute; /* Para garantir que o botão fique na posição correta */
-    top: 60%; /* Ajuste conforme necessário */
-    left: 79%; /* Ajuste conforme necessário */
+    position: absolute; 
+    top: 60%; 
+    left: 79%; 
     transform: translate(-50%, -50%); 
 }
 .artist-card:hover .main-play {
@@ -420,7 +391,6 @@ header {
 }
 .artist-card:hover {
     background-image: linear-gradient(to top, #1F1F1F, transparent);
-    
 }
 .albums-card {
     position: relative;
@@ -433,7 +403,6 @@ header {
 .albums-card:hover {
     background-image: linear-gradient(to top, #1F1F1F, transparent);
 }
-
 .best-card {
     position: relative;
     display: inline-block;
@@ -443,11 +412,7 @@ header {
 }
 .best-card:hover {
     background-image: linear-gradient(to top, #1F1F1F, transparent);
-    
 }
-
-
-
 .main-content::-webkit-scrollbar,
 .main-content::-webkit-scrollbar-thumb {
   width: 24px;
@@ -463,6 +428,8 @@ header {
     background-color: #b4b2b2;
 }
 
+
+/*Footer*/
 .footer-second-bar {
     display: flex;
     gap: 10px;
@@ -498,6 +465,7 @@ header {
     background-color: #b7b3b670; 
 }
 
+/*Barra de Inscrição*/
 .preview-bar {
     display: flex;
     padding: 10px 20px;
@@ -526,6 +494,8 @@ header {
     display: none;
 }
 
+
+/*Para celulares*/
 @media (max-width: 580px) {
     body {
         overflow: hidden;
@@ -535,7 +505,7 @@ header {
     }
     .container {
         margin: 5px;
-        width: 100vw;
+        width: 100px;
     }
     .sign {
         display: none;
